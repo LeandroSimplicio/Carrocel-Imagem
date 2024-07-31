@@ -108,7 +108,7 @@ header {
   position: absolute;
   bottom: 50px;
   left: 50%;
-  display: fle;
+  display: flex;
   gap: 20px;
 }
 
@@ -126,9 +126,40 @@ header {
   filter: brightness(80%);
 }
 
-
 .container .thumb .content {
   position: absolute;
   bottom: 10px;
   left: 10px;
+
+}
+
+.container .arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 120px;
+  left: 120px;
+  width: 300px;
+
+
+}
+
+.container .arrows button {
+  border-radius: 10px;
+  border: none;
+  padding: 12px 17px;
+  background-color: #eee4;
+  color: #eee;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5em;
+
+}
+
+.container .arrows button:hover{
+  background-color: #eee;
+  color: #000;
+  transition: 0.7s;
+  
 }
