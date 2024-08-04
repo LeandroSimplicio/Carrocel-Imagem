@@ -9,19 +9,22 @@ btnNext.onclick = () => moveItemsOnClick("next");
 btnBack.onclick = () => moveItemsOnClick("back");
 
 function moveItemsOnClick(type) {
-  let listItems = document.querySelectorAll(".list .list-item")
-  let thumbItems = document.querySelectorAll(".thumb .thumb-item")
-
-  console.log(listItems)
-  console.log(thumbItems)
+  let listItems = document.querySelectorAll(".list .list-item");
+  let thumbItems = document.querySelectorAll(".thumb .thumb-item");
 
   if (type === "next") {
-    list.appendChild(listItems [0])
-    thumb.appendChild(thumbItems [0])
-    
+    list.appendChild(listItems[0]);
+    thumb.appendChild(thumbItems[0]);
+    container.classList.add("next");
   } else {
-    list.prepend(listItems[3])
-    thumb.prepend(thumbItems[3])
-    
+    list.prepend(listItems[listItems.length - 1]);
+    thumb.prepend(thumbItems[thumbItems.length - 1]);
+    container.classList.add("back");
   }
+
+  setTimeout(() => {
+    container.classList.remove("next");
+    container.classList.remove("back");
+  }, 3000);
+
 }
