@@ -26,5 +26,4 @@ function moveItemsOnClick(type) {
     container.classList.remove("next");
     container.classList.remove("back");
   }, 3000);
-
 }
