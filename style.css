@@ -257,14 +257,3 @@ header a {
     bottom: 50px;
   }
 }
-
-
-@media screen and (max-width: 768px) {
-  .container {
-    display: block;
-  }
-  
-  .container .thumb .thumb-item img {
-    width: 50;
-  }
-}
